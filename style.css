@@ -1,0 +1,168 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f2f5;
+  padding: 40px 20px;
+  color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4A90E2; /* Azul suave y moderno */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+    font-size: 3rem; /* Tamaño de fuente grande */
+    font-weight: bold; /* Peso de fuente fuerte */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    position: relative;
+    display: inline-block; /* Para permitir la animación en el borde inferior */
+    padding: 10px 0; /* Agregar un poco de espacio arriba y abajo */
+    width: 100%;
+}
+
+/* Animación de subrayado con gradiente */
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #4A90E2, #50E3C2); /* Gradiente de colores vibrantes */
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Cambio de color y animación en el hover */
+h1:hover::after {
+    transform: scaleX(1);
+}
+
+h1:hover {
+    color: #756d88; /* Cambia a verde claro al hacer hover */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de texto suave */
+}
+
+
+h3 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Formulario */
+.form-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Lista de usuarios */
+.list-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.user-info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.edit {
+  background-color: #ffc107;
+  color: #333;
+}
+
+button.edit:hover {
+  background-color: #e0a800;
+}
+
+button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #b02a37;
+}
